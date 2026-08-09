@@ -6,6 +6,7 @@
   - [docker-compose file](#docker-compose-file)
   - [Build](#build)
 - [Versions](#versions)
+  - [**v0.13:**](#v013)
   - [**v0.12:**](#v012)
   - [**v0.11:**](#v011)
   - [**v0.10:**](#v010)
@@ -33,6 +34,8 @@ services:
   httpdphp:
     image: naxora/httpdphp:latest # or naxora/httpdphp:vx.xx
     container_name: httpdphp
+    environment:
+      - TZ: Europe/Berlin
     ports:
       - <PORT>:80
     volumes:
@@ -51,6 +54,36 @@ $ sudo docker build -t YOUR-NAME/httpdphp:latest . --no-cache
 <hr>
 
 # Versions
+
+## **v0.13:**  
+Alpine: 3.24.1
+
+PHP 8.5.9  
+php85-session  
+php85-apache2  
+php85-pdo_mysql  
+php85-curl  
+php85-cli  
+php85-common  
+php85-mysqli  
+php85-zip  
+php85-gd  
+php85-mbstring  
+php85-simplexml  
+php85-xml  
+php85-bcmath  
+**+ php85-pdo**  
+**+ php85-intl**  
+**+ php85-dom**  
+**+ php85-fileinfo**  
+**+ php85-iconv**  
+**+ php85-phar**  
+**+ php85-tokenizer**  
+**+ php85-xmlreader**  
+**+ php85-xmlwriter**  
+**+ php85-openssl**  
+**+ php85-pecl-xdebug**  
+.htaccess support  
 
 ## **v0.12:**  
 Alpine: 3.22.2  
